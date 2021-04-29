@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-    private fun performLogin(){
+    private fun performLogin(){   //lezione da guardare
         var email = emailEditTextLogin.text.toString()
         var password = passwordEditTextLogin.text.toString()
 
