@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">iMessage</string>
+    <string name="username_hint_registration">Username</string>
+    <string name="email_hint_registration">Email</string>
+    <string name="password_hint_registration">Password</string>
+    <string name="register_button">Register</string>
+    <string name="already_account_link">Already have an account?</string>
+    <string name="login_button">Login</string>
+    <string name="back_registration">Back to registration</string>
+
+
+</resources>

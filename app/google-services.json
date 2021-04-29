@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334946118449",
+    "project_id": "imessage-2259c",
+    "storage_bucket": "imessage-2259c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334946118449:android:f617424e19842069b8de10",
+        "android_client_info": {
+          "package_name": "com.ponte.imessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334946118449-jk9jb8ttg7veceaii2f6gnok5ot4ust9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Z-DtZ1lsc9lr9IDc0N4MlPp_oi5zWaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334946118449-jk9jb8ttg7veceaii2f6gnok5ot4ust9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
