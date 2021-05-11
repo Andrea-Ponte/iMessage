@@ -38,14 +38,15 @@ class MainActivity : AppCompatActivity() {
         Log.d("Main Activity", "Email is $email")
         Log.d("Main Activity", "Password is $password")
 
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password) //aggiungiamo dei listener per il successo (ovvero richiesta mandata con successo)
             .addOnCompleteListener {
-                if (!it.isSuccessful) {
+                if (!it.isSuccessful) {  //da vedere se ha davverro avuto successo
                     return@addOnCompleteListener
                 }
-                //se va
+                //se va a buon fine
                 Log.d("Main Activity", "Fatto")
             }
+            //richiesta non mandata per un errore
             .addOnFailureListener {
                 Toast.makeText(this, "Failed ${it.message}", Toast.LENGTH_LONG).show()
                 Log.d("Main Activity", "failed ${it.message}")
