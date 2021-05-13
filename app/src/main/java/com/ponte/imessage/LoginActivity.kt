@@ -8,7 +8,6 @@ import android.widget.Toast
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +40,10 @@ class LoginActivity : AppCompatActivity() {
                 if (!it.isSuccessful) return@addOnCompletedListener  //it e' il risultato del task
 
                 Log.d("Login Activity", "Login is succesfull")
+
+                val intent = Intent(this, LatestMessageActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Failure ", Toast.LENGTH_LONG).show()

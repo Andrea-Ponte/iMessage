@@ -5,23 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/android_color"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
+
+    <android.widget.Button
+        android:id="@+id/buttonSelectPhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_select_photo"
+        android:textColor="@color/white"
+        android:text="Select Photo"
+        app:layout_constraintEnd_toEndOf="@+id/usernameEditTextRegister"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/usernameEditTextRegister"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/usernameEditTextRegister"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="268dp"
         android:layout_marginEnd="24dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_edit_text_login"
         android:ems="10"
         android:hint="@string/username_hint_registration"
         android:inputType="textPersonName"
         android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -29,7 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="45dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_edit_text_login"
         android:ems="10"
         android:hint="@string/email_hint_registration"
         android:inputType="textEmailAddress"
@@ -43,7 +58,8 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="45dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_edit_text_login"
+        android:paddingLeft="16dp"
         android:ems="10"
         android:hint="@string/password_hint_registration"
         android:inputType="textPassword"
@@ -51,12 +67,14 @@
         app:layout_constraintStart_toStartOf="@+id/emailEditTextRegister"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextRegister" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/register_button"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_botton"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditTextRegister"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passwordEditTextRegister"
@@ -74,4 +92,15 @@
         app:layout_constraintEnd_toEndOf="@+id/registerButton"
         app:layout_constraintStart_toStartOf="@+id/registerButton"
         app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewRegister"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSelectPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSelectPhoto"
+        app:layout_constraintStart_toStartOf="@+id/buttonSelectPhoto"
+        app:layout_constraintTop_toTopOf="@+id/buttonSelectPhoto"></de.hdodenhof.circleimageview.CircleImageView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
