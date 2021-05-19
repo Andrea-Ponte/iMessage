@@ -15,18 +15,19 @@
                 android:value=".LatestMessageActivity">
             </meta-data>
         </activity>
-        <activity android:name=".LatestMessageActivity" />
+        <activity android:name=".LatestMessageActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity
             android:name=".RegisterActivity"
             android:windowSoftInputMode="stateAlwaysVisible">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

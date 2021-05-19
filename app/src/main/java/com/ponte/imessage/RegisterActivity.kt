@@ -52,8 +52,8 @@ class RegisterActivity : AppCompatActivity() {
             /*val bitmapDrawable = BitmapDrawable(bitmap)
             buttonSelectPhoto.setBackgroundDrawable(bitmapDrawable) //guaradare come ha messo l'immagine giusta
              */
-            imageViewRegister.setImageBitmap(bitmap)
-            buttonSelectPhoto.alpha = 0f
+            imageViewRegister.setImageBitmap(bitmap)  //carichiamo il bitmap sopra l'imageView inserita con la lireria esterna
+            buttonSelectPhoto.alpha = 0f  //bottone trasparente cosi' da far vedere solo l'immagine
         }
     }
 
@@ -115,7 +115,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 //dopo la creazione dell'utente
                 val intent = Intent(this, LatestMessageActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK) //serve per non farci andare nella schermata di login/registrazione da loggati
                 startActivity(intent)
             }
             .addOnFailureListener{
