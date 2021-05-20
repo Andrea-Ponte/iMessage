@@ -125,4 +125,6 @@ class RegisterActivity : AppCompatActivity() {
 
 }
 
-class User( val uid:String, val username:String, val profileImageUrl:String)
+class User( val uid:String, val username:String, val profileImageUrl:String) {
+    constructor() : this ("", "", "")  //necessario per non far dare errore a firebase quando scarichiamo utenti
+}
