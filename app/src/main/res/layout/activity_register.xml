@@ -43,13 +43,14 @@
         android:id="@+id/emailEditTextRegister"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_edit_text_login"
         android:ems="10"
         android:hint="@string/email_hint_registration"
         android:inputType="textEmailAddress"
         android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="@+id/usernameEditTextRegister"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/usernameEditTextRegister"
         app:layout_constraintTop_toBottomOf="@+id/usernameEditTextRegister" />
 
@@ -57,13 +58,14 @@
         android:id="@+id/passwordEditTextRegister"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_edit_text_login"
-        android:paddingLeft="16dp"
         android:ems="10"
         android:hint="@string/password_hint_registration"
         android:inputType="textPassword"
+        android:paddingLeft="16dp"
         app:layout_constraintEnd_toEndOf="@+id/emailEditTextRegister"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/emailEditTextRegister"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextRegister" />
 
@@ -71,10 +73,10 @@
         android:id="@+id/registerButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_botton"
         android:text="@string/register_button"
         android:textColor="@color/white"
-        android:background="@drawable/rounded_botton"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditTextRegister"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/passwordEditTextRegister"
@@ -84,14 +86,15 @@
         android:id="@+id/alreadyHaveAccountRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="68dp"
         android:text="@string/already_account_link"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/registerButton"
-        app:layout_constraintStart_toStartOf="@+id/registerButton"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+        app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_button"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewRegister"
@@ -101,6 +104,16 @@
         app:layout_constraintEnd_toEndOf="@+id/buttonSelectPhoto"
         app:layout_constraintStart_toStartOf="@+id/buttonSelectPhoto"
         app:layout_constraintTop_toTopOf="@+id/buttonSelectPhoto"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/registerButton"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

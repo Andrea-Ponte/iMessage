@@ -1,4 +1,4 @@
-package com.ponte.imessage
+package com.ponte.imessage.messages
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.google.firebase.auth.FirebaseAuth
+import com.ponte.imessage.R
 
 class LatestMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class LatestMessageActivity : AppCompatActivity() {
     private fun verifyUserLoggedIn () {
         val uid = FirebaseAuth.getInstance().uid
         if(uid==null){
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, com.ponte.imessage.register_login.RegisterActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
@@ -32,7 +33,7 @@ class LatestMessageActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.menu_sign_out -> {
                 FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this, RegisterActivity::class.java)
+                val intent = Intent(this, com.ponte.imessage.register_login.RegisterActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }

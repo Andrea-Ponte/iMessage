@@ -1,12 +1,13 @@
-package com.ponte.imessage
+package com.ponte.imessage.register_login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import com.ponte.imessage.messages.LatestMessageActivity
+import com.ponte.imessage.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

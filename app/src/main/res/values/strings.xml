@@ -7,6 +7,7 @@
     <string name="already_account_link">Already have an account?</string>
     <string name="login_button">Login</string>
     <string name="back_registration">Back to registration</string>
+    <string name="username">Username</string>
 
 
 </resources>

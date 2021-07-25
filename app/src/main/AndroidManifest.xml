@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_imessage"
         android:supportsRtl="true"
         android:theme="@style/Theme.IMessage">
-        <activity android:name=".ChatLogActivity"></activity>
-        <activity android:name=".NewMessageActivity">
+        <activity android:name=".messages.ChatLogActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LatestMessageActivity"></meta-data>
+                android:value=".messages.LatestMessageActivity"></meta-data>
         </activity>
-        <activity android:name=".LatestMessageActivity">
+        <activity android:name=".messages.NewMessageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessageActivity"></meta-data>
+        </activity>
+        <activity android:name=".messages.LatestMessageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +27,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".register_login.LoginActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".register_login.RegisterActivity"
             android:windowSoftInputMode="stateAlwaysVisible"></activity>
     </application>
 

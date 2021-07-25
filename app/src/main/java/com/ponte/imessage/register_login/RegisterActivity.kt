@@ -1,18 +1,24 @@
-package com.ponte.imessage
+package com.ponte.imessage.register_login
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
 import com.google.firebase.storage.FirebaseStorage
+import com.ponte.imessage.R
+import com.ponte.imessage.messages.LatestMessageActivity
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
 
@@ -20,6 +26,8 @@ import java.util.*
 class RegisterActivity : AppCompatActivity() {
 
     var selectedPhotoUri: Uri? = null
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) { //
         super.onCreate(savedInstanceState)
@@ -40,7 +48,30 @@ class RegisterActivity : AppCompatActivity() {
             intent.type = "image/"
             startActivityForResult(intent, 0)
         }
+
+       /* val signInButton = findViewById<SignInButton>(R.id.sign_in_button)
+        signInButton.setSize(SignInButton.SIZE_STANDARD)
+
+        signInButton.setOnClickListener{
+
+            // Configure Google Sign In
+            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build()
+
+            googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+            auth = Firebase.initialize()
+
+        }*/
     }
+
+    /*private fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
+        val RC_SIGN_IN
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }*/
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
